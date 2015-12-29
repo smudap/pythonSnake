@@ -29,7 +29,7 @@ Istnieje możliwość zmiany prędkości węża w tej samej grze.
 ======================
 
 Repository `pythonSnake` includes files:
-  * `pythonSnake.py` - main aplication with Snake game,
+  * `pythonSnake.py` - main application with Snake game,
   * `pythonSnake.png` - game's icon.
 
 Game rules:
