@@ -36,13 +36,11 @@ class pythonSnake(QtGui.QMainWindow):
         Method which initiates GUI.
         """
         
-        # Window
         self.resize(540, 580)
         self.center()
         self.setWindowTitle('pythonSnake')
         self.setWindowIcon(QtGui.QIcon('pythonSnake.png'))    
         
-        # Menu
         menubar = self.menuBar()
         
         newGameAction = QtGui.QAction('&New Game        N', self)
@@ -63,10 +61,8 @@ class pythonSnake(QtGui.QMainWindow):
         helpMenu = menubar.addMenu('&Help')
         helpMenu.addAction(aboutAction)
         
-        # Statusbar
         self.statusBar()
         
-        # Game
         if self.played:        
             self.newGame()
         
