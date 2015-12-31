@@ -32,7 +32,7 @@ class pythonSnake(QtGui.QMainWindow):
     paused = True
     over = False
     timer = QtCore.QBasicTimer()
-    
+
     def initUI(self):
         """
         Method which initiates GUI.
