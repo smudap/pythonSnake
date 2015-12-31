@@ -6,7 +6,7 @@ import random
 import numpy as np
 import pandas as pd
 from PyQt4 import QtGui, QtCore
-
+    
 class pythonSnake(QtGui.QMainWindow):
     """
     Main class with Snake game.
