@@ -11,7 +11,7 @@ Zasady gry:
 Poruszamy się wężem tak aby zjeść pożywienie, które pojawiło się na mapie.
 Z każdym zjedzeniem pożywienia rośnie nam wąż. Koniec gry następuje
 w momencie wyjechania poza obszar gry lub gdy wąż ugryzie sam siebie.
-
+ 
 Jak grać:
 
 Do poruszania używamy strzałek. Jeśli chcemy by wąż poruszał się szybciej,
