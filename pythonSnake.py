@@ -1,5 +1,7 @@
+#!/home/smender/anaconda3/bin/python
+# -*- coding: utf-8 -*-
+
 import sys
-import time
 import random
 import numpy as np
 import pandas as pd
@@ -470,5 +472,5 @@ def main():
     pythonSnakeGame = pythonSnake()
     sys.exit(app.exec_())
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
