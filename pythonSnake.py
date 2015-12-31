@@ -40,27 +40,27 @@ class pythonSnake(QtGui.QMainWindow):
         
         self.resize(540, 580)
         self.center()
-        self.setWindowTitle('pythonSnake')
-        self.setWindowIcon(QtGui.QIcon('pythonSnake.png'))    
+        self.setWindowTitle("pythonSnake")
+        self.setWindowIcon(QtGui.QIcon("pythonSnake.png"))    
         
         menubar = self.menuBar()
         
-        newGameAction = QtGui.QAction('&New Game        N', self)
+        newGameAction = QtGui.QAction("&New Game        N", self)
         newGameAction.triggered.connect(self.newGameEvent)
-        optionsAction = QtGui.QAction('&Options             O', self)
+        optionsAction = QtGui.QAction("&Options             O", self)
         optionsAction.triggered.connect(self.optionsEvent)
-        exitAction = QtGui.QAction('&Quit                    Q', self)
+        exitAction = QtGui.QAction("&Quit                    Q", self)
         exitAction.triggered.connect(self.close)
   
-        fileMenu = menubar.addMenu('&File')
+        fileMenu = menubar.addMenu("&File")
         fileMenu.addAction(newGameAction)
         fileMenu.addAction(optionsAction)
         fileMenu.addAction(exitAction)
         
-        aboutAction = QtGui.QAction('&About        A', self)
+        aboutAction = QtGui.QAction("&About        A", self)
         aboutAction.triggered.connect(self.aboutEvent)
         
-        helpMenu = menubar.addMenu('&Help')
+        helpMenu = menubar.addMenu("&Help")
         helpMenu.addAction(aboutAction)
         
         self.statusBar()
@@ -82,7 +82,7 @@ class pythonSnake(QtGui.QMainWindow):
     
     def newGameEvent(self):
         """
-        Method which initiates game when 'New Game' or 'N' is pressed.
+        Method which initiates game when "New Game" or "N" is pressed.
         """
         
         self.played = True
@@ -90,7 +90,7 @@ class pythonSnake(QtGui.QMainWindow):
     
     def optionsEvent(self):
         """
-        Method which initiates game's options when 'Options' or 'O' is pressed.
+        Method which initiates game's options when "Options" or "O" is pressed.
         """
         
         if self.played:
@@ -101,7 +101,7 @@ class pythonSnake(QtGui.QMainWindow):
     
     def closeEvent(self, event):
         """
-        Method which closes game when 'Quit' or 'Q' is pressed.
+        Method which closes game when "Quit" or "Q" is pressed.
         """
         
         if self.played:
@@ -116,7 +116,7 @@ class pythonSnake(QtGui.QMainWindow):
             
     def aboutEvent(self):
         """
-        Method which initiates information about game when 'About' or 'A' is pressed.
+        Method which initiates information about game when "About" or "A" is pressed.
         """
         
         if self.played:
