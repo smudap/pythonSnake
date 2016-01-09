@@ -216,6 +216,7 @@ class pythonSnake(QtGui.QMainWindow):
             [self.snakeHeadX + 10, self.snakeHeadY],
             [self.snakeHeadX + 20, self.snakeHeadY]
         ])
+        self.getHighScore()
         self.start()
 
     def start(self):
@@ -236,9 +237,12 @@ class pythonSnake(QtGui.QMainWindow):
         self.paused = True
         if self.played and self.over:
             score = len(self.snake) - 3
-            if score > self.highscore:
+            if score >= self.highscore:
                 self.highscore = score
-            self.statusBar().showMessage("Game Over. Highscore: " + str(self.highscore)
+                self.setHighScore()
+                self.statusBar().showMessage("Game Over. New Highscore: " + str(self.highscore) + ".")
+            else:
+                self.statusBar().showMessage("Game Over. Highscore: " + str(self.highscore)
                                          + ". Your score: " + str(score) + ".")
         else:         
             self.statusBar().showMessage("Game Paused.")
@@ -252,10 +256,38 @@ class pythonSnake(QtGui.QMainWindow):
         
         self.paused = True
         self.highscore = len(self.snake) - 3
+        self.setHighScore()
         self.statusBar().showMessage("Game finished. You Win! Highscore: " 
                                      + str(self.highscore) + ".")
         self.timer.stop()
-        self.update()    
+        self.update()
+        
+    def getHighScore(self):
+        """
+        Method which gets highscores from csv file and sets proper highscore.
+        """
+        
+        highscores = pd.read_csv("highscore.csv")
+        if self.size == 300:
+            self.highscore = highscores.small[0]
+        elif self.size == 400:
+            self.highscore = highscores.medium[0]
+        elif self.size == 500:
+            self.highscore = highscores.large[0]
+            
+    def setHighScore(self):
+        """
+        Method which sets highscores to csv file.
+        """
+        
+        highscores = pd.read_csv("highscore.csv")
+        if self.size == 300:
+            highscores.small = self.highscore
+        elif self.size == 400:
+            highscores.medium = self.highscore
+        elif self.size == 500:
+            highscores.large = self.highscore
+        highscores.to_csv("highscore.csv", index = False)
         
     def keyPressEvent(self, event):
         """
