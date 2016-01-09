@@ -4,7 +4,8 @@ pythonSnake
 Repozytorium `pythonSnake` zawiera następujące pliki:
 
   * `pythonSnake.py` - główna aplikacja z grą typu Snake,
-  * `pythonSnake.png` - ikona gry.
+  * `pythonSnake.png` - ikona gry,
+  * `highscore.csv` - plik z rekordami.
 
 Zasady gry:
 
@@ -36,7 +37,8 @@ Istnieje możliwość zmiany prędkości węża w tej samej grze.
 Repository `pythonSnake` includes files:
 
   * `pythonSnake.py` - main application with Snake game,
-  * `pythonSnake.png` - game's icon.
+  * `pythonSnake.png` - game's icon,
+  * `highscore.csv` - file with highscores.
 
 Game rules:
 
