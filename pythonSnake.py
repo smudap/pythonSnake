@@ -157,7 +157,8 @@ class pythonSnake(QtGui.QMainWindow):
             [self.snakeHeadX, self.snakeHeadY],
             [self.snakeHeadX + 10, self.snakeHeadY],
             [self.snakeHeadX + 20, self.snakeHeadY]
-        ])
+            ])
+            self.getHighScore()
         if self.played:    
             self.drawFood(board)    
             self.drawSnake(board)
